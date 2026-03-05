@@ -23,29 +23,36 @@
 ---
 
 ## 🏗 Architecture
-![Architecture](docs/architecture.png)
 
-## 📊 ERD
-![ERD](docs/erd.png)
+| Architecture |
+|---|
+| ![](docs/architecture.png) |
+
+프로젝트는 MVC 구조로 구성했습니다.
+
+요청 흐름은  
+Controller → Service → DAO → Database 순서로 동작합니다.
 
 ---
 
-## 🧭 화면 흐름(사용자 → 관리자)
+## 📊 ERD
 
-1) 출석  
-![Attendance](docs/screenshots/01_attendance.png)
+| ERD |
+|---|
+| ![](docs/erd.png) |
 
-2) 일일 퀘스트/퀴즈  
-![Quest](docs/screenshots/02_quest.png)
+---
 
-3) 상점  
-![Store](docs/screenshots/03_store.png)
+## 🧭 화면 흐름 (사용자 → 관리자)
 
-4) 인벤토리(프로필 + 보관함)  
-![Inventory](docs/screenshots/04_inventory.png)
+| 출석 | 일일 퀘스트 / 퀴즈 |
+|---|---|
+| ![](docs/screenshots/01_attendance.png) | ![](docs/screenshots/02_quest.png) |
 
-5) 포인트 이력  
-![History](docs/screenshots/05_history.png)
+| 상점 | 인벤토리 (프로필 + 보관함) |
+|---|---|
+| ![](docs/screenshots/03_store.png) | ![](docs/screenshots/04_inventory.png) |
 
-6) 관리자(상품 관리)  
-![Admin](docs/screenshots/06_admin.png)
+| 포인트 이력 | 관리자 (상품 관리) |
+|---|---|
+| ![](docs/screenshots/05_history.png) | ![](docs/screenshots/06_admin.png) |
