@@ -13,7 +13,7 @@ sender.setPassword(emailProperties.getPassword());
 # 26/03/13 Ver1.0.2
 ### 2) 환경 변수 설정
 - 이유: 민감정보를 시스템 환경변수에서 관리하려고 합니다.
-- 파일" `src/main/resources/application.properties`
+- 파일: `src/main/resources/application.properties`
 ```java
 spring.datasource.url=${APP_DB_URL}
 spring.datasource.username=${DB_USERNAME}
