@@ -60,7 +60,7 @@ Review Tag는 **영화·콘텐츠 기반 리뷰 플랫폼**입니다.
 
 ---
 
-## 구조 및 문서
+## 구조 및 설계 문서
 
 ### Architecture
 
@@ -73,6 +73,22 @@ Review Tag는 **영화·콘텐츠 기반 리뷰 플랫폼**입니다.
 | ERD |
 |---|
 | ![](docs/diagrams/erd.png) |
+
+---
+
+## 주요 화면 흐름
+
+| 출석 | 일일 퀘스트 / 퀴즈 |
+|---|---|
+| ![](docs/screenshots/01_attendance.png) | ![](docs/screenshots/02_quest.png) |
+
+| 상점 | 인벤토리 |
+|---|---|
+| ![](docs/screenshots/03_store.png) | ![](docs/screenshots/04_inventory.png) |
+
+| 포인트 이력 | 관리자 |
+|---|---|
+| ![](docs/screenshots/05_history.png) | ![](docs/screenshots/06_admin.png) |
 
 ---
 
