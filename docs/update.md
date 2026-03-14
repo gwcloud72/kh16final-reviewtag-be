@@ -9,5 +9,25 @@
 ```java
 sender.setUsername(emailProperties.getUsername());
 sender.setPassword(emailProperties.getPassword());
-props.setProperty("mail.smtp.debug", "false");
+```
+# 26/03/13 Ver1.0.2
+### 2) 환경 변수 설정
+- 이유: 민감정보를 시스템 환경변수에서 관리하려고 합니다.
+- 파일" `src/main/resources/application.properties`
+```java
+spring.datasource.url=${APP_DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+custom.tmdb.key=${TMDB_API_KEY}
+custom.tmdb.access-token=${TMDB_ACCESS_TOKEN}
+custom.tmdb.base-url=${TMDB_BASE_URL}
+
+custom.jwt.key-str=${APP_JWT_KEY}
+custom.jwt.issuer=${APP_JWT_ISSUER}
+custom.jwt.expiration=${APP_JWT_EXPIRATION_MINUTES}
+custom.jwt.refresh-expiration=${APP_JWT_REFRESH_EXPIRATION_DAYS}
+custom.jwt.renewal-limit=${APP_JWT_RENEWAL_LIMIT_MINUTES}
+
+custom.email.username=${APP_EMAIL_USERNAME}
+custom.email.password=${APP_EMAIL_PASSWORD}
 ```
