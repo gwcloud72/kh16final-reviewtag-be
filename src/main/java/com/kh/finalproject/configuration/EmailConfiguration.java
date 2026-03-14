@@ -2,6 +2,7 @@ package com.kh.finalproject.configuration;
 
 import java.util.Properties;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -12,7 +13,8 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 @Configuration
 public class EmailConfiguration {
 	
-	
+	@Autowired
+	private EmailProperties emailProperties;
 	// 스프링에서는 서버가 시작되면 @Bean을 자동으로 등록하도록 설계되어있다.
 	@Bean
 	public JavaMailSenderImpl sender() {
@@ -23,8 +25,8 @@ public class EmailConfiguration {
 		// 서비스 제공자 정보 설정
 		sender.setHost("smtp.gmail.com"); // 이용할 업체의 호스트 정보
 		sender.setPort(587); // 이용할 업체의 포트 번호 // port = 네트워크를 사용하는 프로세스 번호
-		sender.setUsername("jaeyeah819"); // 이용할 업체의 사용자 계정이름 (자격이 있는 계정)
-		sender.setPassword("qbvkkfwqmhoczaxg"); // 업체에서 발급받은 비밀번호 (구글은 앱 비밀번호)
+		sender.setUsername(emailProperties.getUsername());
+		sender.setPassword(emailProperties.getPassword());
 		
 			// 추가 옵션 정보 (gmail용)
 			Properties props = new Properties(); // 추가 정보를 담을 저장소 (String, String 형태의 Map)
