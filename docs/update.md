@@ -34,10 +34,11 @@ custom.email.password=${APP_EMAIL_PASSWORD}
 # 26/03/14 Ver1.0.3
 ### 3) 비로그인 상태 포인트 상점 이용 불가능 해결
 - 이유: 비로그인상태에서 포인트 상점을 이용이 불가능했습니다. 해결하기위해 인터셉터를 수정하였습니다.
-파일: `src/main/java/com/kh/finalproject/aop/InterceptorConfiguration.java`
+- 파일: `src/main/java/com/kh/finalproject/aop/InterceptorConfiguration.java`
 ```java
  "/point/main/store",         // 포인트 상점 메인 조회는 제외
  "/point/main/store/",        // 포인트 상점 메인 조회는 제외
  "/point/main/store/detail/**", // 포인트 상품 상세 조회는 제외
-
 ```
+# 26/03/14 Ver1.0.4
+### 4) 멤버 
