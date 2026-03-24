@@ -94,11 +94,12 @@ public class TokenService {
 	}
 	
 	public String generateRefreshToken(TokenVO tokenVO) {
-		return generateAccessToken(MemberDto.builder()
-				.memberId(tokenVO.getLoginId())
-				.memberLevel(tokenVO.getLoginLevel())
-				.memberNickname(tokenVO.getLoginNickname())
-				.build());
+	    return generateRefreshToken(  // RefreshToken 호출로 수정
+	        MemberDto.builder()
+	            .memberId(tokenVO.getLoginId())
+	            .memberLevel(tokenVO.getLoginLevel())
+	            .memberNickname(tokenVO.getLoginNickname())
+	            .build());
 	}
 	
 	/// 넘어온 정보를 파싱(해석해서 변환) ////////////////////////////////////////////
